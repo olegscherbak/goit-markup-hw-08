@@ -13,40 +13,71 @@
             crossorigin="anonymous">
         <link rel="stylesheet" href="./css/main.min.css">
     </head>
-    <body>
+    <body class="modal-open">
     <!--Navigation-->
         <header class="header">
             <div class="header__container container">
                 <nav class="navigation">
                     <a class="logo" href="">Web<span class="logo-black">Studio</span></a>
+                    <button type="button" class="navigation__mobile-menu-btn" data-menu-button>
+                        <svg class="navigation__mobile-menu-icon">
+                            <use href="./images/icons.svg#icon-menu_mob"></use>
+                        </svg>
+                    </button>
                     <ul class="navigation__list">
                         <li class="navigation__item"><a class="link link__studio" href="./index.html">Студия</a></li>
                         <li class="navigation__item"><a class="link" href="./portfolio.html">Портфолио</a></li>
                         <li class="navigation__item"><a class="link" href="">Контакты</a></li>
                     </ul>
                 </nav>
-                <ul class="navigation__list">
-                    <li class="navigation__item mail">
-                        <a href="mailto:info@devstudio.com" class="link contact__link">
-                            <svg class="navigation__icon" width="16" height="12">
+                <ul class="contacts">
+                    <li class="contacts__item mail">
+                        <a href="mailto:info@devstudio.com" class="contacts__link">
+                            <svg class="contacts__icon" width="16" height="12">
                                 <use href="./images/icons.svg#icon-envelope"></use>
                             </svg>
                         info@devstudio.com</a>
                     </li>
-                    <li class="navigation__item">
-                        <a href="tel:+380961111111" class="link contact__link">
-                            <svg class="navigation__icon" width="10" height="16">
+                    <li class="contact__item">
+                        <a href="tel:+380961111111" class="contacts__link">
+                            <svg class="contacts__icon" width="10" height="16">
                                 <use href="./images/icons.svg#icon-smartphone"></use>
                             </svg>
                         +38 096 111 11 11</a>
                     </li>
                 </ul>
             </div>
+            <div class="mobile-menu" data-menu>
+                <div class="mobile-menu__container container">
+                    <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                        <svg class="mobile-menu__icon">
+                            <use href="./images/icons.svg#icon-x"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__navigation">
+                        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link mobile-menu__link-studio">Студия</a></li>
+                        <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link">Портфолио</a></li>
+                        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contact">
+                        <li class="mobile-menu__phone"><a href="tel:+380961111111" class="mobile-menu__phone-link">
+                            +38 096 111 11 11</a></li>
+                        <li class="mobile-menu__mail"><a href="mailto:info@devstudio.com" class="mobile-menu__mail-link">
+                            info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mobile-menu__social">
+                        <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link mobile-menu__instagram">Instagram</a></li>
+                        <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link mobile-menu__twitter">Twitter</a></li>
+                        <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link mobile-menu__facebook">Facebook</a></li>
+                        <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <!--Main-->
         <main>
-            <!--Section main-->
+            <!-- Section main-->
             <section class="main section">
                 <div class="container">
                     <h1 class="main__hero">Эффективные решения <br> для вашего бизнеса</h1>
@@ -55,7 +86,7 @@
             </section>
 
             <!--Section features-->
-            <section class="features">
+            <section class="features section features__section">
                 <div class="container">
                     <h2 class="visually-hidden">Особенности</h2>
                     <ul class="features__list">
@@ -99,21 +130,39 @@
                 </div>
             </section>
 
-            <!--Section work-->
+            <!-- Section work-->
             <section class="work section">
                 <div class="container">
                     <h2 class="title">Чем мы занимаемся</h2>
                     <ul class="work__list">
                         <li class="work__item">
-                            <img src="./images/box1.jpg" alt="Планшет" width="370">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/img1.webp 1x, ./images/desktop/img1@2x.webp 2x" media="(min-width: 1200px)"
+                                    type="image/webp">
+                                <source srcset="./images/desktop/img1.jpg 1x, ./images/desktop/img1@2x.jpg 2x" media="(min-width: 1200px)">
+                                
+                                <img src="./images/desktop/img1.jpg" alt="Планшет" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="work__text"><p>Десктопные приложения</p></div>
                         </li>
                         <li class="work__item">
-                            <img src="./images/box2.jpg" alt="Телефон" width="370">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/img2.webp 1x, ./images/desktop/img2@2x.webp 2x" media="(min-width: 1200px)"
+                                    type="image/webp">
+                                <source srcset="./images/desktop/img2.jpg 1x, ./images/desktop/img2@2x.jpg 2x" media="(min-width: 1200px)">
+                            
+                                <img src="./images/desktop/img2.jpg" alt="моб телефон" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="work__text"><p>Мобильные приложения</p></div>
                         </li>
                         <li class="work__item">
-                            <img src="./images/box3.jpg" alt="Палитра цветов на планшете" width="370">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/img3.webp 1x, ./images/desktop/img3@2x.webp 2x" media="(min-width: 1200px)"
+                                    type="image/webp">
+                                <source srcset="./images/desktop/img3.jpg 1x, ./images/desktop/img3@2x.jpg 2x" media="(min-width: 1200px)">
+                            
+                                <img src="./images/desktop/img3.jpg" alt="палитра цветов на планшете" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="work__text"><p>Дизайнерские решения</p></div>
                         </li>
                     </ul>
@@ -123,10 +172,24 @@
             <!--Team-->
             <section class="team section">
                 <div class="container">
-                    <h2 class="title">Наша команда</h2>
+                    <h2 class="team__header">Наша команда</h2>
                     <ul class="team__list">
                         <li class="team__item">
-                            <img src="./images/img1.jpg" alt="Учасник1" width="270">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/member1-desk.webp 1x, ./images/desktop/member1-desk@2x.webp 2x" media="(min-width: 1200px)"
+                                    type="image/webp">
+                                <source srcset="./images/desktop/member1-desk.jpg 1x, ./images/desktop/member1-desk@2x.jpg 2x" media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/tablet/member1-tab.webp 1x, ./images/tablet/member1-tab@2x.webp 2x" media="(min-width: 768px)"
+                                    type="image/webp">
+                                <source srcset="./images/tablet/member1-tab.jpg 1x, ./images/tablet/member1-tab@2x.jpg 2x" media="(min-width: 768px)">
+
+                                <source srcset="./images/mob/member1-mob.webp 1x, ./images/mob/member1-mob@2x.webp 2x" media="(max-width: 767px)"
+                                    type="image/webp">
+                                <source srcset="./images/mob/member1-mob.jpg 1x, ./images/mob/member1-mob@2x.jpg 2x" media="(max-width: 767px)">
+
+                                <img src="./images/desktop/member1-desk.jpg" alt="Учасник1" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="team__member">
                                 <h3 class="team__title">Игорь Демьяненко</h3>
                                 <p class="team__text" lang="en">Product Designer</p>
@@ -163,7 +226,23 @@
                             </div>
                         </li>
                         <li class="team__item">
-                            <img src="./images/img2.jpg" alt="Учасник2" width="270">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/member2-desk.webp 1x, ./images/desktop/member2-desk@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/desktop/member2-desk.jpg 1x, ./images/desktop/member2-desk@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/tablet/member2-tab.webp 1x, ./images/tablet/member2-tab@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/tablet/member2-tab.jpg 1x, ./images/tablet/member2-tab@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/mob/member2-mob.webp 1x, ./images/mob/member2-mob@2x.webp 2x" media="(max-width: 767px)"
+                                    type="image/webp">
+                                <source srcset="./images/mob/member2-mob.jpg 1x, ./images/mob/member2-mob@2x.jpg 2x" media="(max-width: 767px)">
+                            
+                                <img src="./images/desktop/member2-desk.jpg" alt="Учасник2" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="team__member">
                                 <h3 class="team__title">Ольга Репина</h3>
                                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -200,7 +279,23 @@
                             </div>
                         </li>
                         <li class="team__item">
-                            <img src="./images/img3.jpg" alt="Учасник3" width="270">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/member3-desk.webp 1x, ./images/desktop/member3-desk@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/desktop/member3-desk.jpg 1x, ./images/desktop/member3-desk@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/tablet/member3-tab.webp 1x, ./images/tablet/member3-tab@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/tablet/member3-tab.jpg 1x, ./images/tablet/member3-tab@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/mob/member3-mob.webp 1x, ./images/mob/member3-mob@2x.webp 2x" media="(max-width: 767px)"
+                                    type="image/webp">
+                                <source srcset="./images/mob/member3-mob.jpg 1x, ./images/mob/member3-mob@2x.jpg 2x" media="(max-width: 767px)">
+                            
+                                <img src="./images/desktop/member3-desk.jpg" alt="Учасник3" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="team__member">
                                 <h3 class="team__title">Николай Тарасов</h3>
                                 <p class="team__text" lang="en">Marketing</p>
@@ -237,7 +332,23 @@
                             </div>
                         </li>
                         <li class="team__item">
-                            <img src="./images/img4.jpg" alt="Учасник4" width="270">
+                            <picture class="picture">
+                                <source srcset="./images/desktop/member4-desk.webp 1x, ./images/desktop/member4-desk@2x.webp 2x"
+                                    media="(min-width: 1200px)" type="image/webp">
+                                <source srcset="./images/desktop/member4-desk.jpg 1x, ./images/desktop/member4-desk@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                            
+                                <source srcset="./images/tablet/member4-tab.webp 1x, ./images/tablet/member4-tab@2x.webp 2x"
+                                    media="(min-width: 768px)" type="image/webp">
+                                <source srcset="./images/tablet/member4-tab.jpg 1x, ./images/tablet/member4-tab@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                            
+                                <source srcset="./images/mob/member4-mob.webp 1x, ./images/mob/member4-mob@2x.webp 2x" media="(max-width: 767px)"
+                                    type="image/webp">
+                                <source srcset="./images/mob/member4-mob.jpg 1x, ./images/mob/member4-mob@2x.jpg 2x" media="(max-width: 767px)">
+                            
+                                <img src="./images/desktop/member4-desk.jpg" alt="Учасник4" alt="retina picture" class="picture-img">
+                            </picture>
                             <div class="team__member">
                                 <h3 class="team__title">Михаил Ермаков</h3>
                                 <p class="team__text" lang="en">UI Designer</p>
@@ -280,7 +391,7 @@
             <!--Clients-->
             <section class="clients section">
                 <div class="container">
-                    <h2 class="title">Постоянные клиенты</h2>
+                    <h2 class="clients__header">Постоянные клиенты</h2>
                     <ul class="clients__list">
                         <li class="clients__item">
                             <a href="" class="clients__link">
@@ -332,7 +443,7 @@
         <!--Footer-->
         <footer class="footer">
             <div class="footer__container container">
-                <div>
+                <div class="footer__list">
                     <a class="logo logo__footer" href="">Web<span class="logo-white">Studio</span></a>
                     <address class="footer__address">
                         <ul>
@@ -392,7 +503,7 @@
             </div>
         </footer>
 
-        <!--Backdrop-->
+        <!-- Backdrop-->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button type="button" class="modal__btn-close" data-modal-close>
@@ -445,5 +556,6 @@
         </div>
 
         <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

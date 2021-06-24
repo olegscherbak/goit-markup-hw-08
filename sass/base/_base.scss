@@ -23,9 +23,12 @@ img {
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--title-color);
-  padding-top: 78px;
+  // padding-top: 78px;
   position: relative;
 }
+// body.modal-open {
+//   overflow: hidden;
+// }
 
 li {
   list-style-type: none;

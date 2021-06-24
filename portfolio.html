@@ -19,28 +19,62 @@
             <div class="header__container container">
                 <nav class="navigation">
                     <a class="logo" href="">Web<span class="logo-black">Studio</span></a>
+                    <button type="button" class="navigation__mobile-menu-btn" data-menu-button>
+                        <svg class="navigation__mobile-menu-icon">
+                            <use href="./images/icons.svg#icon-menu_mob"></use>
+                        </svg>
+                    </button>
                     <ul class="navigation__list">
                         <li class="navigation__item"><a class="link" href="./index.html">Студия</a></li>
                         <li class="navigation__item"><a class="link link__portfolio" href="./portfolio.html">Портфолио</a></li>
                         <li class="navigation__item"><a class="link" href="">Контакты</a></li>
                     </ul>
                 </nav>
-                <ul class="navigation__list">
-                    <li class="navigation__item mail">
-                        <a href="mailto:info@devstudio.com" class="link contact__link">
-                            <svg class="navigation__icon" width="16" height="12">
+                <ul class="contacts">
+                    <li class="contacts__item mail">
+                        <a href="mailto:info@devstudio.com" class="contacts__link">
+                            <svg class="contacts__icon" width="16" height="12">
                                 <use href="./images/icons.svg#icon-envelope"></use>
                             </svg>
                             info@devstudio.com</a>
                     </li>
-                    <li class="navigation__item">
-                        <a href="tel:+380961111111" class="link contact__link">
-                            <svg class="navigation__icon" width="10" height="16">
+                    <li class="contact__item">
+                        <a href="tel:+380961111111" class="contacts__link">
+                            <svg class="contacts__icon" width="10" height="16">
                                 <use href="./images/icons.svg#icon-smartphone"></use>
                             </svg>
                             +38 096 111 11 11</a>
                     </li>
                 </ul>
+            </div>
+            <div class="mobile-menu" data-menu>
+                <div class="mobile-menu__container container">
+                    <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                        <svg class="mobile-menu__icon">
+                            <use href="./images/icons.svg#icon-x"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__navigation">
+                        <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link">Студия</a></li>
+                        <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__link mobile-menu__link-portfolio">Портфолио</a></li>
+                        <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+                    </ul>
+                    <ul class="mobile-menu__contact">
+                        <li class="mobile-menu__phone"><a href="tel:+380961111111" class="mobile-menu__phone-link">
+                                +38 096 111 11 11</a></li>
+                        <li class="mobile-menu__mail"><a href="mailto:info@devstudio.com" class="mobile-menu__mail-link">
+                                info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mobile-menu__social">
+                        <li class="mobile-menu__social-item"><a href=""
+                                class="mobile-menu__social-link mobile-menu__instagram">Instagram</a></li>
+                        <li class="mobile-menu__social-item"><a href=""
+                                class="mobile-menu__social-link mobile-menu__twitter">Twitter</a></li>
+                        <li class="mobile-menu__social-item"><a href=""
+                                class="mobile-menu__social-link mobile-menu__facebook">Facebook</a></li>
+                        <li class="mobile-menu__social-item"><a href="" class="mobile-menu__social-link">LinkedIn</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <!--Main-->
@@ -49,21 +83,37 @@
                 <div class="container">
                     <h1 class="visually-hidden">Портфолио</h1>
                     <ul class="portfolio__button">  
-                        <li class="portfolio__btn-right"><button class="portfolio__btn" type="button">Все</button></li>
-                        <li class="portfolio__btn-right"><button class="portfolio__btn" type="button">Веб-сайты</button></li>
-                        <li class="portfolio__btn-right"><button class="portfolio__btn" type="button">Приложения</button></li>
-                        <li class="portfolio__btn-right"><button class="portfolio__btn" type="button">Дизайн</button></li>
-                        <li class="portfolio__btn-right"><button class="portfolio__btn" type="button">Маркетинг</button></li>
+                        <li class="portfolio__btn-item"><button class="portfolio__btn" type="button">Все</button></li>
+                        <li class="portfolio__btn-item"><button class="portfolio__btn" type="button">Веб-сайты</button></li>
+                        <li class="portfolio__btn-item"><button class="portfolio__btn" type="button">Приложения</button></li>
+                        <li class="portfolio__btn-item"><button class="portfolio__btn" type="button">Дизайн</button></li>
+                        <li class="portfolio__btn-item"><button class="portfolio__btn" type="button">Маркетинг</button></li>
                     </ul>
                     <ul class="card">
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p1.jpg" alt="Ноутбук" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card1.webp 1x, ./images/desktop/card1@2x.webp 2x"
+                                            media="(min-width: 1200px)" type="image/webp">
+                                        <source srcset="./images/desktop/card1.jpg 1x, ./images/desktop/card1@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card1.webp 1x, ./images/tablet/card1@2x.webp 2x"
+                                            media="(min-width: 768px)" type="image/webp">
+                                        <source srcset="./images/tablet/card1.jpg 1x, ./images/tablet/card1@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card1.webp 1x, ./images/mob/card1@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card1.jpg 1x, ./images/mob/card1@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card1.jpg" alt="Ноутбук" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
                                 </div>
-                                <div class="card__product">
+                                <div class="card__product card__product-pad">
                                     <h2 class="card__title">Технокряк</h2>
                                     <p class="card__text">Веб-сайт</p>
                                 </div>
@@ -72,7 +122,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p2.jpg" alt="Два баскетболіста на плакаті" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card2.webp 1x, ./images/desktop/card2@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card2.jpg 1x, ./images/desktop/card2@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card2.webp 1x, ./images/tablet/card2@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card2.jpg 1x, ./images/tablet/card2@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card2.webp 1x, ./images/mob/card2@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card2.jpg 1x, ./images/mob/card2@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card2.jpg" alt="Два баскетболіста на плакаті" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
                                 </div>
@@ -85,7 +149,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p3.jpg" alt="Зображення рибини на емблемі ресторану" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card3.webp 1x, ./images/desktop/card3@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card3.jpg 1x, ./images/desktop/card3@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card3.webp 1x, ./images/tablet/card3@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card3.jpg 1x, ./images/tablet/card3@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card3.webp 1x, ./images/mob/card3@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card3.jpg 1x, ./images/mob/card3@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card3.jpg" alt="Зображення рибини на емблемі ресторану" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -99,7 +177,22 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p4.jpg" alt="Навушники" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card4.webp 1x, ./images/desktop/card4@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card4.jpg 1x, ./images/desktop/card4@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card4.webp 1x, ./images/tablet/card4@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card4.jpg 1x, ./images/tablet/card4@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card4.webp 1x, ./images/mob/card4@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card4.jpg 1x, ./images/mob/card4@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card4.jpg" alt="Навушники" alt="retina picture"
+                                            class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -113,7 +206,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p5.jpg" alt="Біла та коричнева коробка" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card5.webp 1x, ./images/desktop/card5@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card5.jpg 1x, ./images/desktop/card5@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card5.webp 1x, ./images/tablet/card5@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card5.jpg 1x, ./images/tablet/card5@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card5.webp 1x, ./images/mob/card5@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card5.jpg 1x, ./images/mob/card5@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card5.jpg" alt="Біла та коричнева коробка" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -127,7 +234,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p6.jpg" alt="Робочий монітор" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card6.webp 1x, ./images/desktop/card6@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card6.jpg 1x, ./images/desktop/card6@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card6.webp 1x, ./images/tablet/card6@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card6.jpg 1x, ./images/tablet/card6@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card6.webp 1x, ./images/mob/card6@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card6.jpg 1x, ./images/mob/card6@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card6.jpg" alt="Робочий монітор" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -141,7 +262,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p7.jpg" alt="Розгорнута книга" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card7.webp 1x, ./images/desktop/card7@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card7.jpg 1x, ./images/desktop/card7@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card7.webp 1x, ./images/tablet/card7@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card7.jpg 1x, ./images/tablet/card7@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card7.webp 1x, ./images/mob/card7@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card7.jpg 1x, ./images/mob/card7@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card7.jpg" alt="Розгорнута книга" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -155,7 +290,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p8.jpg" alt="Бірка" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card8.webp 1x, ./images/desktop/card8@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card8.jpg 1x, ./images/desktop/card8@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card8.webp 1x, ./images/tablet/card8@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card8.jpg 1x, ./images/tablet/card8@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card8.webp 1x, ./images/mob/card8@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card8.jpg 1x, ./images/mob/card8@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card8.jpg" alt="Бірка" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -169,7 +318,21 @@
                         <li class="card__item card__item-grid">
                             <a href="" class="card__link">
                                 <div class="card__overlay">
-                                    <img src="./images/img-p9.jpg" alt="Робота за ноутбуком" width="370">
+                                    <picture class="picture">
+                                        <source srcset="./images/desktop/card9.webp 1x, ./images/desktop/card9@2x.webp 2x" media="(min-width: 1200px)"
+                                            type="image/webp">
+                                        <source srcset="./images/desktop/card9.jpg 1x, ./images/desktop/card9@2x.jpg 2x" media="(min-width: 1200px)">
+                                    
+                                        <source srcset="./images/tablet/card9.webp 1x, ./images/tablet/card9@2x.webp 2x" media="(min-width: 768px)"
+                                            type="image/webp">
+                                        <source srcset="./images/tablet/card9.jpg 1x, ./images/tablet/card9@2x.jpg 2x" media="(min-width: 768px)">
+                                    
+                                        <source srcset="./images/mob/card9.webp 1x, ./images/mob/card9@2x.webp 2x" media="(max-width: 767px)"
+                                            type="image/webp">
+                                        <source srcset="./images/mob/card9.jpg 1x, ./images/mob/card9@2x.jpg 2x" media="(max-width: 767px)">
+                                    
+                                        <img src="./images/desktop/card9.jpg" alt="Робота за ноутбуком" alt="retina picture" class="picture-img">
+                                    </picture>
                                     <p class="card__overlay-hidden">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу
                                     для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -188,7 +351,7 @@
         <!--Footer-->
         <footer class="footer">
             <div class="footer__container container">
-                <div>
+                <div class="footer__list">
                     <a class="logo logo__footer" href="">Web<span class="logo-white">Studio</span></a>
                     <address class="footer__address">
                         <ul>
@@ -234,7 +397,23 @@
                         </li>
                     </ul>
                 </div>
+                <div class="form">
+                    <form action="#">
+                        <p class="footer-social__title">Подпишитесь на рассылку</p>
+                        <div class="form-top">
+                            <label></label><input type="email" name="mail" class="form__input" placeholder="E-mail">
+                            <button type="submit" class="form__btn">
+                                Подписаться
+                                <svg class="form__icon">
+                                    <use href="./images/icons.svg#icon-send-footer"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </footer>
+
+        <script src="./js/mobile-menu.js"></script>
     </body>
 </html>

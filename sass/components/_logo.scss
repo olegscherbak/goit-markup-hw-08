@@ -1,16 +1,17 @@
+//320+
 .logo {
   font-family: Raleway;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 0.86;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--accent-color);
-  margin-right: 93px;
+  // margin-right: 93px;
 }
 .logo-black {
   font-family: Raleway;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 0.86;
   letter-spacing: 0.03em;
   color: var(--logo-color);
 }
@@ -19,4 +20,33 @@
 }
 .logo__footer {
   margin: 0 auto;
+}
+
+//768+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+
+  .logo__footer {
+    margin: 0 auto;
+  }
+}
+
+//1200+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 0.83;
+    margin-right: 93px;
+  }
+
+  .logo-black {
+    font-size: 26px;
+    line-height: 0.83;
+  }
+
+  .logo__footer {
+    margin: 0 auto;
+  }
 }

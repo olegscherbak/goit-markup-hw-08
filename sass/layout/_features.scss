@@ -1,34 +1,79 @@
-.features {
-  padding-top: 94px;
+//320+
+@media screen and (min-width: 320px) {
+  .features {
+    &__title {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--head-color);
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+      color: var(--title-color);
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      background: var(--btn-color);
+      margin-bottom: 30px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
-.features__title {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--head-color);
-  margin-bottom: 10px;
-  width: 270px;
+
+//768+
+@media screen and (min-width: 768px) {
+  .features {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 60px) / 2);
+      margin: 15px;
+    }
+  }
 }
-.features__item:not(:last-child) {
-  margin-right: 30px;
-}
-.features__text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-}
-.features__list {
-  display: flex;
-  justify-content: space-between;
-}
-.features__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 270px;
-  height: 120px;
-  background: var(--btn-color);
-  margin-bottom: 30px;
+
+//1200+
+@media screen and (min-width: 1200px) {
+  .features {
+    // padding-top: 94px;
+
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 120px) / 4);
+      margin: 15px;
+    }
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .features__section {
+    padding-bottom: 0;
+  }
 }
