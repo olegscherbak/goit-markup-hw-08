@@ -68,12 +68,9 @@
       flex-basis: calc((100% - 120px) / 4);
       margin: 15px;
     }
-    &__item:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
 
-  .features__section {
-    padding-bottom: 0;
+    &__section {
+      padding-bottom: 0;
+    }
   }
 }
